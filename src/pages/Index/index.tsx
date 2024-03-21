@@ -1,11 +1,9 @@
-import React, { memo, Suspense } from 'react'
+import React, { memo } from 'react'
 
 import Box from '../../components/Box'
-import Spinner from '../../components/Spinner'
 import logo from '../../logo.svg'
 
 import Counter from './Counter'
-import DocList from './DocList'
 import styles from './index.module.css'
 
 interface Props {}
@@ -19,11 +17,6 @@ const Index: React.FC<Props> = memo(() => {
       </Box>
       <Box>
         <Counter />
-      </Box>
-      <Box>
-        <Suspense fallback={<Spinner size="xl" />}>
-          <DocList />
-        </Suspense>
       </Box>
     </>
   )
