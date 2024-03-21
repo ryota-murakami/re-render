@@ -1,8 +1,10 @@
 import React, { memo, useState } from 'react'
 
+import ChildCounter from './ChildCounter'
+
 interface Props {}
 
-const Counter: React.FC<Props> = memo(() => {
+const ParentCounter: React.FC<Props> = memo(() => {
   const [count, setCount] = useState(0)
 
   return (
@@ -13,9 +15,10 @@ const Counter: React.FC<Props> = memo(() => {
       >
         count is: {count}
       </button>
+      <ChildCounter />
     </>
   )
 })
-Counter.displayName = 'Counter'
+ParentCounter.displayName = 'Counter'
 
-export default Counter
+export default ParentCounter

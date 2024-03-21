@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import Box from '../../components/Box'
 import logo from '../../logo.svg'
 
-import Counter from './Counter'
+import ParentCounter from './ParentCounter'
 import styles from './index.module.css'
 
 interface Props {}
@@ -16,7 +16,7 @@ const Index: React.FC<Props> = memo(() => {
         <img src={logo} alt="react-logo" className="react-logo" />
       </Box>
       <Box>
-        <Counter />
+        <ParentCounter />
       </Box>
     </>
   )
