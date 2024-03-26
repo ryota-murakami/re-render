@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import ErrorBoundary from './components/ErrorBoundary'
-import Layout from './components/Layout/Layout'
+import Container from './components/Layout/Container'
 import Index from './pages/Index'
 import Notfound from './pages/Notfound'
 
@@ -10,18 +10,18 @@ const router = createBrowserRouter([
     path: '/',
     element: (
       <ErrorBoundary>
-        <Layout>
+        <Container>
           <Index />
-        </Layout>
+        </Container>
       </ErrorBoundary>
     ),
   },
   {
     path: '*',
     element: (
-      <Layout>
+      <Container>
         <Notfound />
-      </Layout>
+      </Container>
     ),
   },
 ])

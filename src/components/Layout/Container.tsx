@@ -1,15 +1,15 @@
 import type { PropsWithChildren } from 'react'
 import React, { memo } from 'react'
 
-import styles from './Layout.module.css'
+import styles from './Container.module.css'
 
-const Layout: React.FC<PropsWithChildren> = memo(({ children, ...rest }) => {
+const Container: React.FC<PropsWithChildren> = memo(({ children, ...rest }) => {
   return (
     <main className={styles.layout} {...rest}>
       <div className={styles.container}>{children}</div>
     </main>
   )
 })
-Layout.displayName = 'Layout'
+Container.displayName = 'Container'
 
-export default Layout
+export default Container
